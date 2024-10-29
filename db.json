@@ -1,1 +1,207 @@
-{"dogs":[{"name":"Charlie","image":"/assets/blue-heeler.png","description":"as Tala Transmasculine Qatari East little damp","isFavorite":true,"id":0},{"name":"Carroll","image":"/assets/boxer.png","description":"marketplace County Southwest Card Phosphorus","isFavorite":false,"id":1},{"name":"Tobin","image":"/assets/chihuahua.avif","description":"Nevada Ringgit Coupe overriding North hm Cloned Cruiser","isFavorite":true,"id":2},{"name":"Antonia","image":"/assets/cowardly.png","description":"Supervisor Jany the utilisation male","isFavorite":true,"id":3},{"name":"Roy","image":"/assets/corgi.png","description":"Northwest Communications cyan payment bandwidth","isFavorite":true,"id":4},{"name":"Houston","image":"/assets/blue-heeler.png","description":"embrace TCP Data than Gwent Electronic restfully","isFavorite":true,"id":5},{"name":"Geovanni","image":"/assets/corgi.png","description":"payment challenge ouch joule Rubber tender South","isFavorite":true,"id":6},{"name":"Keira","image":"/assets/corgi.png","description":"Pants ampere North transmitting East","isFavorite":true,"id":7},{"name":"Darwin","image":"/assets/corgi.png","description":"Pop Oganesson Visionary corrigo likewise","isFavorite":true,"id":8},{"name":"Kip","image":"/assets/dalmation.png","description":"fuchsia Southwest interface sievert Minivan Tugrik mindshare","isFavorite":true,"id":9},{"name":"Cleora","image":"/assets/blue-heeler.png","description":"online since indexing Sawayn Solutions wonderfully calculating","isFavorite":false,"id":10},{"name":"Remington","image":"/assets/boxer.png","description":"Identity Gwynedd glower anti violet VGA North upward","isFavorite":true,"id":11},{"name":"Effie","image":"/assets/cowardly.png","description":"but now Technician Latin pixel ability North","isFavorite":true,"id":12},{"name":"Evalyn","image":"/assets/boxer.png","description":"cyan North loyally Jazz Lawrence up Mississippi","isFavorite":false,"id":13},{"name":"Murphy","image":"/assets/dalmation.png","description":"Future Clwyd Lockman furiously grey ambitus Bespoke","isFavorite":true,"id":14},{"name":"Gracie","image":"/assets/boxer.png","description":"siemens Tala holistic IB applications microchip Metal","isFavorite":true,"id":15},{"name":"Omari","image":"/assets/chihuahua.avif","description":"bandwidth desire Home generating panel hence Cyprus Accountability","isFavorite":true,"id":16},{"name":"Lela","image":"/assets/dalmation.png","description":"management Applications yowza Direct for purple Incredible Investor","isFavorite":false,"id":17},{"name":"Jamel","image":"/assets/dalmation.png","description":"Internal Plastic salmon deliver than","isFavorite":false,"id":18},{"name":"Michel","image":"/assets/blue-heeler.png","description":"strange Cotton Wagon Peso woman wireless female","isFavorite":true,"id":19}]}
+{
+  "dogs": [
+    {
+      "name": "Gwen",
+      "image": "/assets/boxer.png",
+      "description": "Cadillac fooey Games Hermaphrodite unleash",
+      "isFavorite": true,
+      "id": "9"
+    },
+    {
+      "name": "Brianne",
+      "image": "/assets/boxer.png",
+      "description": "wherever whiteboard monitor Sedan Kansas Funk East",
+      "isFavorite": true,
+      "id": "10"
+    },
+    {
+      "name": "Lura",
+      "image": "/assets/boxer.png",
+      "description": "World Mouse gladden without hertz bluetooth transmit",
+      "isFavorite": true,
+      "id": "11"
+    },
+    {
+      "name": "Nash",
+      "image": "/assets/dalmation.png",
+      "description": "dedicated Sedan West Kia Fiji Antarctica describe",
+      "isFavorite": true,
+      "id": "12"
+    },
+    {
+      "name": "Tyler",
+      "image": "/assets/boxer.png",
+      "description": "brightly Regional maximize Pickup modulo unlike PCI Skyway",
+      "isFavorite": true,
+      "id": "13"
+    },
+    {
+      "name": "Joel",
+      "image": "/assets/chihuahua.avif",
+      "description": "invoice Shoes Baby at visualize",
+      "isFavorite": true,
+      "id": "14"
+    },
+    {
+      "name": "Sibyl",
+      "image": "/assets/dalmation.png",
+      "description": "Web Analyst transmitter Potassium rise Car Agent",
+      "isFavorite": true,
+      "id": "15"
+    },
+    {
+      "name": "Lelah",
+      "image": "/assets/corgi.png",
+      "description": "down Neutrois farad nor woot structure Frozen Fermium",
+      "isFavorite": true,
+      "id": "16"
+    },
+    {
+      "name": "Trycia",
+      "image": "/assets/cowardly.png",
+      "description": "extensible teal Towels Program Praseodymium card Frozen Bronze",
+      "isFavorite": true,
+      "id": "17"
+    },
+    {
+      "name": "Keshawn",
+      "image": "/assets/cowardly.png",
+      "description": "yellow Northeast Global online IB Small interactive multimedia",
+      "isFavorite": true,
+      "id": "18"
+    },
+    {
+      "name": "Tabitha",
+      "image": "/assets/boxer.png",
+      "description": "sapiente Bicycle deposit female Johnson National oh textus",
+      "isFavorite": true,
+      "id": "19"
+    },
+    {
+      "id": "8a43",
+      "image": "/assets/boxer.jpeg",
+      "description": "gmymt",
+      "isFavorite": true,
+      "name": "tyj"
+    },
+    {
+      "id": "811a",
+      "image": "/assets/chihuahua.avif",
+      "description": "dfbdfb",
+      "isFavorite": true,
+      "name": "dgbd"
+    },
+    {
+      "id": "a5d9",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": true,
+      "name": ""
+    },
+    {
+      "id": "3c8b",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": true,
+      "name": ""
+    },
+    {
+      "id": "d0dd",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": true,
+      "name": ""
+    },
+    {
+      "id": "2b7f",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": true,
+      "name": ""
+    },
+    {
+      "id": "ed7a",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": true,
+      "name": ""
+    },
+    {
+      "id": "2c3c",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": true,
+      "name": ""
+    },
+    {
+      "id": "de8b",
+      "image": "/assets/chihuahua.avif",
+      "description": "",
+      "isFavorite": false,
+      "name": ""
+    },
+    {
+      "id": "96a0",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": true,
+      "name": ""
+    },
+    {
+      "id": "b3fb",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": true,
+      "name": ""
+    },
+    {
+      "id": "fe87",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": true,
+      "name": ""
+    },
+    {
+      "id": "807c",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": true,
+      "name": ""
+    },
+    {
+      "id": "d6d4",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": true,
+      "name": ""
+    },
+    {
+      "id": "5db8",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "name": ""
+    },
+    {
+      "id": "5f81",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "name": ""
+    },
+    {
+      "id": "a246",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "name": ""
+    },
+    {
+      "id": "9a0b",
+      "image": "/assets/blue-heeler.png",
+      "description": "",
+      "isFavorite": false,
+      "name": ""
+    }
+  ]
+}
