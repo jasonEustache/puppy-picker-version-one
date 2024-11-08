@@ -2,34 +2,70 @@ import { Link } from "react-router-dom";
 
 // navigation component
 export const FunctionalSection = ({
-  navBar,
-  navBarSetters,
+  navBarStatus,
+  navBarStatusSetters,
   totalFavAndUnFav,
   children,
 }) => {
   // use static  function control to determine user selection
   //use the useeffect to fetch dongs from database
-  const [favorite, unfavorite, createDog] = navBar;
-  const [setFavorite, setUnfavorited, setCreateDog] = navBarSetters;
+  const [
+    favoriteDogStatus,
+    unfavoriteDogStatus,
+    createDogStatus,
+    defaultDogStatus,
+  ] = navBarStatus;
+  const [setFavoriteDog, setUnfavoriteDog, SetCreateDog, setDefaultDog] =
+    navBarStatusSetters;
 
   const onClickChangeActive = (currentIndex) => {
     return (e) => {
       e.preventDefault();
-      const allIndex = [0, 1, 2];
-      const navSelect = [favorite, unfavorite, createDog];
-      const navSetter = [setFavorite, setUnfavorited, setCreateDog];
-      const selectedIndex = allIndex[currentIndex];
-      const currentValue = navSelect[selectedIndex];
-      const currentSetter = navSetter[selectedIndex];
-      const previousIndex = navSelect
+      const indexes = [0, 1, 2, 3];
+      const statusList = [
+        favoriteDogStatus,
+        unfavoriteDogStatus,
+        createDogStatus,
+        defaultDogStatus,
+      ];
+      const statusSetters = [
+        setFavoriteDog,
+        setUnfavoriteDog,
+        SetCreateDog,
+        setDefaultDog,
+      ];
+
+      ////////////////////
+      const targetId = statusList[e.target.id];
+      const selected = indexes[currentIndex];
+      const currentValue = statusList[selected];
+      const currentSetter = statusSetters[selected];
+
+      if (defaultDogStatus && !targetId) {
+        setDefaultDog(false);
+        currentSetter(true);
+        return;
+      }
+
+      const previousIndex = statusList
         .map((bool, index) => (bool === true ? index : null))
         .filter((item) => {
           return item !== null;
         });
-      const previousValue = navSelect[previousIndex[0]];
-      const previousSetter = navSetter[previousIndex[0]];
-      previousSetter(currentValue);
-      currentSetter(previousValue);
+      // console.log(previousIndex);
+
+      const previousValue = statusList[previousIndex[0]];
+      const previousSetter = statusSetters[previousIndex[0]];
+
+      if (currentValue === previousValue) {
+        previousSetter(false);
+        currentSetter(false);
+        setDefaultDog(true);
+      } else {
+        previousSetter(currentValue);
+        currentSetter(previousValue);
+        setDefaultDog(false);
+      }
     };
   };
 
@@ -44,21 +80,24 @@ export const FunctionalSection = ({
           <div className="selectors">
             {/* This should display the favorited count */}
             <div
-              className={`selector ${favorite ? "active" : ""}`}
+              className={`selector ${favoriteDogStatus ? "active" : ""}`}
               onClick={onClickChangeActive(0)}
+              id="0"
             >
               favorited ( {totalFavAndUnFav.favorite})
             </div>
             {/* This should display the unfavorited count */}
             <div
-              className={`selector ${unfavorite ? "active" : ""}`}
+              className={`selector ${unfavoriteDogStatus ? "active" : ""}`}
               onClick={onClickChangeActive(1)}
+              id=" 1"
             >
               unfavorited ( {totalFavAndUnFav.unFavorite})
             </div>
             <div
-              className={`selector ${createDog ? "active" : ""}`}
+              className={`selector ${createDogStatus ? "active" : ""}`}
               onClick={onClickChangeActive(2)}
+              id="2"
             >
               create dog
             </div>

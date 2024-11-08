@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 //create a controlled form,  user must select a dog in the data list before typing a name or description
 // const defaultSelectedImage = dogPictures.BlueHeeler;
 
-export const FunctionalCreateDogForm = () => {
+export const FunctionalCreateDogForm = (props) => {
   const [name, setName] = useState("");
   const [imageName, setImageName] = useState("BlueHeeler");
   const [description, setDescription] = useState("");
@@ -22,25 +22,33 @@ export const FunctionalCreateDogForm = () => {
     <form
       action=""
       id="create-dog-form"
-      onSubmit={() => {
+      onSubmit={(e) => {
+        e.preventDefault();
         setDisabled(true);
-        const newDog = {
-          name,
-          image,
-          description,
-          isFavorite: false,
-        };
-        Requests.postDog(newDog)
+        Requests.getAllDogs()
+          .then((data) => {
+            props.setDogs(data);
+          })
           .then(() => {
+            Requests.postDog({
+              name,
+              image,
+              description,
+              isFavorite: false,
+            });
+            Requests.getAllDogs().then((data) => {
+              props.setDogs(data);
+            });
+            setDisabled(false);
+          })
+
+          .finally(() => {
             setName("");
             setImageName("BlueHeeler");
             setDescription("");
-          })
-          .finally(() => {
+
             toast.success("good job");
           });
-
-        setDisabled(false);
       }}
     >
       <h4> Create a New Dog </h4>

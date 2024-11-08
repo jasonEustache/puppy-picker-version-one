@@ -6,24 +6,35 @@ import { useEffect } from "react";
 import { Requests } from "../api";
 
 export function FunctionalApp() {
-  const [favorited, setFavorited] = useState(false);
-  const [unfavorited, setUnfavorited] = useState(false);
-  const [createDog, SetCreateDog] = useState(true);
-  const navBar = [favorited, unfavorited, createDog];
-  const navBarSetters = [setFavorited, setUnfavorited, SetCreateDog];
-  const [dogs, setDogs] = useState([]);
+  const [favoriteDogStatus, setFavoriteDog] = useState(false);
+  const [unfavoriteDogStatus, setUnfavoriteDog] = useState(false);
+  const [createDogStatus, SetCreateDog] = useState(false);
+  const [defaultDogStatus, setDefaultDog] = useState(true);
+  const navBarStatus = [
+    favoriteDogStatus,
+    unfavoriteDogStatus,
+    createDogStatus,
+    defaultDogStatus,
+  ];
+  const navBarStatusSetters = [
+    setFavoriteDog,
+    setUnfavoriteDog,
+    SetCreateDog,
+    setDefaultDog,
+  ];
+  const [allDogs, setDogs] = useState([]);
 
-  const favDog = dogs.filter((dog) => {
-    if (dog.isFavorite === true) {
-      return dog;
-    }
+  const favoriteDogs = allDogs.filter((dog) => {
+    return dog.isFavorite ? dog : "";
   });
-  const dog = dogs.filter((dog) => {
-    if (dog.isFavorite === false) {
-      return dog;
-    }
+
+  const unFavoriteDogs = allDogs.filter((dog) => {
+    return !dog.isFavorite ? dog : "";
   });
-  const totalFavAndUnFav = { favorite: favDog.length, unFavorite: dog.length };
+  const totalFavAndUnFav = {
+    favorite: favoriteDogs.length,
+    unFavorite: unFavoriteDogs.length,
+  };
 
   useEffect(() => {
     Requests.getAllDogs().then((data) => {
@@ -37,14 +48,27 @@ export function FunctionalApp() {
         <h1>pup-e-picker (Functional)</h1>
       </header>
       <FunctionalSection
-        navBar={navBar}
-        navBarSetters={navBarSetters}
+        navBarStatus={navBarStatus}
+        navBarStatusSetters={navBarStatusSetters}
         totalFavAndUnFav={totalFavAndUnFav}
         setDogs={setDogs}
       >
-        {favorited ? <FunctionalDogs dogs={favDog} setDogs={setDogs} /> : ""}
-        {unfavorited ? <FunctionalDogs dogs={dog} setDogs={setDogs} /> : ""}
-        {createDog ? <FunctionalCreateDogForm totalDogs={dogs.length} /> : ""}
+        {defaultDogStatus ? (
+          <FunctionalDogs dogs={allDogs} setDogs={setDogs} />
+        ) : (
+          ""
+        )}
+        {favoriteDogStatus ? (
+          <FunctionalDogs dogs={favoriteDogs} setDogs={setDogs} />
+        ) : (
+          ""
+        )}
+        {unfavoriteDogStatus ? (
+          <FunctionalDogs dogs={unFavoriteDogs} setDogs={setDogs} />
+        ) : (
+          ""
+        )}
+        {createDogStatus ? <FunctionalCreateDogForm setDogs={setDogs} /> : ""}
       </FunctionalSection>
     </div>
   );
